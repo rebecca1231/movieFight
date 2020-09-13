@@ -1,4 +1,3 @@
-//import APIKEY from 'process.env'
 
 const autoCompleteConfig = {
     renderOption (movie){
@@ -14,7 +13,7 @@ const autoCompleteConfig = {
     async fetchData (searchTerm) {
         const response = await axios.get('http://www.omdbapi.com/', {
             params: {
-                apikey: "",
+                apikey: APIKEY,
                 s: searchTerm
             }
         });
